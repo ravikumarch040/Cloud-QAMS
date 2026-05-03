@@ -1,6 +1,52 @@
 @Qams.Forms.Api_HostAddress = http://localhost:5148
 
-GET {{Qams.Forms.Api_HostAddress}}/weatherforecast/
+GET {{Qams.Forms.Api_HostAddress}}/health
 Accept: application/json
+
+###
+
+GET {{Qams.Forms.Api_HostAddress}}/api/v1/form-definitions
+Accept: application/json
+X-Tenant-Id: tenant-life-sciences-demo
+X-Correlation-Id: 00000000-0000-0000-0000-000000000001
+
+###
+
+POST {{Qams.Forms.Api_HostAddress}}/api/v1/form-definitions
+Accept: application/json
+Content-Type: application/json
+X-Tenant-Id: tenant-life-sciences-demo
+X-Correlation-Id: 00000000-0000-0000-0000-000000000002
+Idempotency-Key: demo-form-create-001
+
+{
+  "tenantId": "tenant-life-sciences-demo",
+  "name": "CAPA Closure Checklist",
+  "version": "1.0.0",
+  "status": "Draft",
+  "fields": [
+    { "fieldId": "root-cause", "label": "Root Cause", "fieldType": "Text", "required": true },
+    { "fieldId": "action-owner", "label": "Action Owner", "fieldType": "Text", "required": true },
+    { "fieldId": "completion-date", "label": "Completion Date", "fieldType": "Date", "required": true }
+  ]
+}
+
+###
+
+POST {{Qams.Forms.Api_HostAddress}}/api/v1/form-definitions/{{formDefinitionId}}/validate
+Accept: application/json
+Content-Type: application/json
+X-Tenant-Id: tenant-life-sciences-demo
+X-Correlation-Id: 00000000-0000-0000-0000-000000000003
+
+{
+  "tenantId": "tenant-life-sciences-demo",
+  "formDefinitionId": "{{formDefinitionId}}",
+  "values": {
+    "root-cause": "Procedure deviation",
+    "action-owner": "qa-manager-demo",
+    "completion-date": "2026-05-10"
+  }
+}
 
 ###
