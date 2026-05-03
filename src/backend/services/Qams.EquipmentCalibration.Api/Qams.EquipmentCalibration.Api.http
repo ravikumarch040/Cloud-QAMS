@@ -1,6 +1,38 @@
 @Qams.EquipmentCalibration.Api_HostAddress = http://localhost:5176
 
-GET {{Qams.EquipmentCalibration.Api_HostAddress}}/weatherforecast/
+GET {{Qams.EquipmentCalibration.Api_HostAddress}}/health
 Accept: application/json
 
 ###
+
+GET {{Qams.EquipmentCalibration.Api_HostAddress}}/api/v1/equipment-calibrations
+Accept: application/json
+
+###
+
+POST {{Qams.EquipmentCalibration.Api_HostAddress}}/api/v1/equipment-calibrations
+Content-Type: application/json
+X-Tenant-Id: tenant-life-sciences-demo
+X-Idempotency-Key: create-calibration-001
+
+{
+  "tenantId": "tenant-life-sciences-demo",
+  "equipmentName": "Environmental Chamber A",
+  "description": "Temperature and humidity calibration for environmental testing.",
+  "lastCalibrationAtUtc": "2026-03-15T08:00:00Z",
+  "nextCalibrationDueAtUtc": "2026-06-13T08:00:00Z"
+}
+
+###
+
+POST {{Qams.EquipmentCalibration.Api_HostAddress}}/api/v1/equipment-calibrations/eq-1001/calibrate
+Content-Type: application/json
+X-Tenant-Id: tenant-life-sciences-demo
+X-Idempotency-Key: calibrate-001
+
+{
+  "tenantId": "tenant-life-sciences-demo",
+  "calibrationAtUtc": "2026-05-03T09:00:00Z",
+  "intervalDays": 90,
+  "outOfTolerance": false
+}
