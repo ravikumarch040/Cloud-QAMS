@@ -1,0 +1,25 @@
+global:
+  imageRegistry: ""
+  environment: dev
+
+services:
+  identity:
+    image: qams-identity-api
+    tag: latest
+    port: 8080
+  auditLedger:
+    image: qams-audit-ledger-api
+    tag: latest
+    port: 8080
+  workflow:
+    image: qams-workflow-api
+    tag: latest
+    port: 8080
+  qualityEvents:
+    image: qams-quality-events-api
+    tag: latest
+    port: 8080
+  capa:
+    image: qams-capa-api
+    tag: latest
+    port: 8080

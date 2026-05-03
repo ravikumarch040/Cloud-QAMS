@@ -1,0 +1,13 @@
+@Qams.QualityEvents.Api_HostAddress = http://localhost:5083
+
+GET {{Qams.QualityEvents.Api_HostAddress}}/health
+Accept: application/json
+
+###
+
+GET {{Qams.QualityEvents.Api_HostAddress}}/api/v1/quality-events
+Accept: application/json
+X-Tenant-Id: tenant-life-sciences-demo
+X-Correlation-Id: 00000000-0000-0000-0000-000000000004
+
+###

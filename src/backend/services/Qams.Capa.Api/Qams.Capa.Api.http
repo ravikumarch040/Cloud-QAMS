@@ -1,0 +1,13 @@
+@Qams.Capa.Api_HostAddress = http://localhost:5084
+
+GET {{Qams.Capa.Api_HostAddress}}/health
+Accept: application/json
+
+###
+
+GET {{Qams.Capa.Api_HostAddress}}/api/v1/capa-cases
+Accept: application/json
+X-Tenant-Id: tenant-life-sciences-demo
+X-Correlation-Id: 00000000-0000-0000-0000-000000000005
+
+###

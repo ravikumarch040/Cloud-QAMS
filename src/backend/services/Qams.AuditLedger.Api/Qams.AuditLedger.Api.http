@@ -1,0 +1,32 @@
+@Qams.AuditLedger.Api_HostAddress = http://localhost:5081
+
+GET {{Qams.AuditLedger.Api_HostAddress}}/health
+Accept: application/json
+
+###
+
+GET {{Qams.AuditLedger.Api_HostAddress}}/api/v1/audit-ledger/verify
+Accept: application/json
+X-Tenant-Id: tenant-life-sciences-demo
+X-Correlation-Id: 00000000-0000-0000-0000-000000000002
+
+###
+
+POST {{Qams.AuditLedger.Api_HostAddress}}/api/v1/audit-ledger
+Accept: application/json
+Content-Type: application/json
+X-Tenant-Id: tenant-life-sciences-demo
+X-Correlation-Id: 00000000-0000-0000-0000-000000000003
+Idempotency-Key: demo-audit-entry-001
+
+{
+  "tenantId": "tenant-life-sciences-demo",
+  "actorId": "qa-manager-demo",
+  "action": "CapaCreated",
+  "recordType": "CapaCase",
+  "recordId": "capa-0001",
+  "recordVersion": "1",
+  "reason": "Demo regulated action"
+}
+
+###
