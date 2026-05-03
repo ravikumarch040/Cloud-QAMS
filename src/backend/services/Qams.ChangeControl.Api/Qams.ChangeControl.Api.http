@@ -1,0 +1,6 @@
+@Qams.ChangeControl.Api_HostAddress = http://localhost:5037
+
+GET {{Qams.ChangeControl.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

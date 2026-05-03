@@ -11,3 +11,17 @@ X-Tenant-Id: tenant-life-sciences-demo
 X-Correlation-Id: 00000000-0000-0000-0000-000000000005
 
 ###
+
+POST {{Qams.Capa.Api_HostAddress}}/api/v1/capa-cases/capa-0001/close
+Accept: application/json
+Content-Type: application/json
+X-Tenant-Id: tenant-life-sciences-demo
+X-Correlation-Id: 00000000-0000-0000-0000-000000000006
+Idempotency-Key: demo-capa-close-001
+
+{
+  "effectivenessVerified": true,
+  "closureRationale": "Effectiveness verified and all actions completed"
+}
+
+###

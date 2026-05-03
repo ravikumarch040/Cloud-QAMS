@@ -1,0 +1,6 @@
+@Qams.Notification.Api_HostAddress = http://localhost:5057
+
+GET {{Qams.Notification.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

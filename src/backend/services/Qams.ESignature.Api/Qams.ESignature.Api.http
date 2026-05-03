@@ -1,0 +1,37 @@
+@Qams.ESignature.Api_HostAddress = http://localhost:5203
+
+GET {{Qams.ESignature.Api_HostAddress}}/health
+Accept: application/json
+
+###
+
+GET {{Qams.ESignature.Api_HostAddress}}/api/v1/esignatures
+Accept: application/json
+X-Tenant-Id: tenant-life-sciences-demo
+X-Correlation-Id: 00000000-0000-0000-0000-000000000001
+
+###
+
+POST {{Qams.ESignature.Api_HostAddress}}/api/v1/esignatures
+Accept: application/json
+Content-Type: application/json
+X-Tenant-Id: tenant-life-sciences-demo
+X-Correlation-Id: 00000000-0000-0000-0000-000000000002
+Idempotency-Key: demo-esignature-001
+
+{
+  "tenantId": "tenant-life-sciences-demo",
+  "recordType": "CapaCase",
+  "recordId": "capa-0001",
+  "recordVersion": "3",
+  "signedMeaning": "Approved CAPA closure",
+  "reason": "Effectiveness verified and all actions completed",
+  "signerUserId": "qa-manager-demo",
+  "signerDisplayName": "Asha Patel",
+  "reauthMethod": "mfa",
+  "reauthReference": "auth-event-789",
+  "recordHash": "sha256:demo-record-hash",
+  "previousAuditHash": "sha256:demo-previous-audit-hash"
+}
+
+###

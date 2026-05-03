@@ -1,0 +1,6 @@
+@Qams.Complaints.Api_HostAddress = http://localhost:5036
+
+GET {{Qams.Complaints.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

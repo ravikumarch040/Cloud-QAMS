@@ -1,0 +1,6 @@
+@Qams.ValidationEvidence.Api_HostAddress = http://localhost:5169
+
+GET {{Qams.ValidationEvidence.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -18,5 +18,6 @@ build/
 *.log
 *.tmp
 *.swp
+*.tsbuildinfo
 *.nupkg
 *.snupkg

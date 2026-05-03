@@ -22,6 +22,26 @@ src/backend/
     Qams.Workflow.Api/
     Qams.QualityEvents.Api/
     Qams.Capa.Api/
+    Qams.Policy.Api/
+    Qams.ESignature.Api/
+    Qams.Notification.Api/
+    Qams.Forms.Api/
+    Qams.Rules.Api/
+    Qams.DocumentControl.Api/
+    Qams.Training.Api/
+    Qams.ChangeControl.Api/
+    Qams.AuditInspection.Api/
+    Qams.Complaints.Api/
+    Qams.SupplierQuality.Api/
+    Qams.RiskDesignControls.Api/
+    Qams.ProductMaster.Api/
+    Qams.EquipmentCalibration.Api/
+    Qams.ManagementReview.Api/
+    Qams.Reporting.Api/
+    Qams.Search.Api/
+    Qams.AiAssistant.Api/
+    Qams.ValidationEvidence.Api/
+    Qams.Integration.Api/
   shared/
     Qams.BuildingBlocks/
 ```
@@ -37,24 +57,41 @@ src/frontend/
     api-client/
 ```
 
-## Future Backend Services
+## Backend Service Groups
 
-Add new services under `src/backend/services` using the same pattern:
+Platform services:
+
+- `Qams.Identity.Api`
+- `Qams.Policy.Api`
+- `Qams.AuditLedger.Api`
+- `Qams.ESignature.Api`
+- `Qams.Workflow.Api`
+- `Qams.Forms.Api`
+- `Qams.Rules.Api`
+- `Qams.Notification.Api`
+- `Qams.Reporting.Api`
+- `Qams.ValidationEvidence.Api`
+- `Qams.Integration.Api`
+
+Domain services:
 
 - `Qams.DocumentControl.Api`
 - `Qams.Training.Api`
 - `Qams.ChangeControl.Api`
+- `Qams.QualityEvents.Api`
+- `Qams.Capa.Api`
 - `Qams.AuditInspection.Api`
 - `Qams.Complaints.Api`
 - `Qams.SupplierQuality.Api`
 - `Qams.RiskDesignControls.Api`
 - `Qams.ProductMaster.Api`
 - `Qams.EquipmentCalibration.Api`
-- `Qams.Reporting.Api`
+- `Qams.ManagementReview.Api`
+
+Intelligence services:
+
 - `Qams.Search.Api`
 - `Qams.AiAssistant.Api`
-- `Qams.ValidationEvidence.Api`
-- `Qams.Integration.Api`
 
 ## Rules
 

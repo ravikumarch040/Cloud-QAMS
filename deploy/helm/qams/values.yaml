@@ -23,3 +23,83 @@ services:
     image: qams-capa-api
     tag: latest
     port: 8080
+  policy:
+    image: qams-policy-api
+    tag: latest
+    port: 8080
+  eSignature:
+    image: qams-esignature-api
+    tag: latest
+    port: 8080
+  notification:
+    image: qams-notification-api
+    tag: latest
+    port: 8080
+  forms:
+    image: qams-forms-api
+    tag: latest
+    port: 8080
+  rules:
+    image: qams-rules-api
+    tag: latest
+    port: 8080
+  documentControl:
+    image: qams-document-control-api
+    tag: latest
+    port: 8080
+  training:
+    image: qams-training-api
+    tag: latest
+    port: 8080
+  changeControl:
+    image: qams-change-control-api
+    tag: latest
+    port: 8080
+  auditInspection:
+    image: qams-audit-inspection-api
+    tag: latest
+    port: 8080
+  complaints:
+    image: qams-complaints-api
+    tag: latest
+    port: 8080
+  supplierQuality:
+    image: qams-supplier-quality-api
+    tag: latest
+    port: 8080
+  riskDesignControls:
+    image: qams-risk-design-controls-api
+    tag: latest
+    port: 8080
+  productMaster:
+    image: qams-product-master-api
+    tag: latest
+    port: 8080
+  equipmentCalibration:
+    image: qams-equipment-calibration-api
+    tag: latest
+    port: 8080
+  managementReview:
+    image: qams-management-review-api
+    tag: latest
+    port: 8080
+  reporting:
+    image: qams-reporting-api
+    tag: latest
+    port: 8080
+  search:
+    image: qams-search-api
+    tag: latest
+    port: 8080
+  aiAssistant:
+    image: qams-ai-assistant-api
+    tag: latest
+    port: 8080
+  validationEvidence:
+    image: qams-validation-evidence-api
+    tag: latest
+    port: 8080
+  integration:
+    image: qams-integration-api
+    tag: latest
+    port: 8080

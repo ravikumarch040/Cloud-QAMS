@@ -1,0 +1,6 @@
+@Qams.Rules.Api_HostAddress = http://localhost:5129
+
+GET {{Qams.Rules.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

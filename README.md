@@ -9,6 +9,8 @@ This repository now contains the first implementation scaffold:
 - Backend solution with .NET minimal API services.
 - Shared backend building blocks for API responses, headers, audit, events, e-signatures, and workflows.
 - Frontend shell scaffold for a future React micro-frontend workspace.
+- Full backend service boundary scaffold for platform, domain, and intelligence services.
+- Baseline backend test project for shared audit hashing.
 - Azure Bicep infrastructure skeleton.
 - Helm deployment skeleton.
 - Production design and implementation roadmap documents.
@@ -39,6 +41,7 @@ tests/
 ```powershell
 dotnet restore src/backend/Qams.sln
 dotnet build src/backend/Qams.sln
+dotnet test src/backend/Qams.sln -m:1
 dotnet run --project src/backend/services/Qams.Capa.Api/Qams.Capa.Api.csproj
 ```
 
@@ -59,6 +62,7 @@ The first implementation slice is the regulated SaaS platform foundation:
 1. Tenant provisioning.
 2. Workflow definition.
 3. Quality event creation.
-4. CAPA creation and guarded closure.
-5. Audit ledger verification.
-6. E-signature and validation evidence integration.
+4. CAPA creation and guarded closure with e-signatures.
+5. Audit ledger verification with hash chain.
+6. E-signature service for regulated actions.
+7. Policy evaluation for RBAC/ABAC.

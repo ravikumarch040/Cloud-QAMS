@@ -1,0 +1,6 @@
+@Qams.AuditInspection.Api_HostAddress = http://localhost:5218
+
+GET {{Qams.AuditInspection.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
