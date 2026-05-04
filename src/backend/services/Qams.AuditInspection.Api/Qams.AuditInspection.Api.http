@@ -1,6 +1,23 @@
 @Qams.AuditInspection.Api_HostAddress = http://localhost:5218
 
-GET {{Qams.AuditInspection.Api_HostAddress}}/weatherforecast/
+GET {{Qams.AuditInspection.Api_HostAddress}}/health
 Accept: application/json
 
 ###
+
+GET {{Qams.AuditInspection.Api_HostAddress}}/api/v1/inspections
+Accept: application/json
+
+###
+
+POST {{Qams.AuditInspection.Api_HostAddress}}/api/v1/inspections
+Content-Type: application/json
+X-Tenant-Id: tenant-life-sciences-demo
+X-Idempotency-Key: create-inspection-001
+
+{
+  "tenantId": "tenant-life-sciences-demo",
+  "title": "Quarterly Quality Audit",
+  "scope": "Review supplier qualification and calibration records.",
+  "scheduledAtUtc": "2026-06-01T09:00:00Z"
+}

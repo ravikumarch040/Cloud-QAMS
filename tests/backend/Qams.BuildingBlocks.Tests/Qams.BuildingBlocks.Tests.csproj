@@ -20,6 +20,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\src\backend\shared\Qams.BuildingBlocks\Qams.BuildingBlocks.csproj" />
+    <ProjectReference Include="..\..\..\src\backend\services\Qams.Forms.Api\Qams.Forms.Api.csproj" />
+    <ProjectReference Include="..\..\..\src\backend\services\Qams.Rules.Api\Qams.Rules.Api.csproj" />
   </ItemGroup>
 
 </Project>

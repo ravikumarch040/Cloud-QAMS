@@ -1,6 +1,9 @@
 @Qams.Search.Api_HostAddress = http://localhost:5110
 
-GET {{Qams.Search.Api_HostAddress}}/weatherforecast/
+GET {{Qams.Search.Api_HostAddress}}/health
 Accept: application/json
 
 ###
+
+GET {{Qams.Search.Api_HostAddress}}/api/v1/search?query=quality
+Accept: application/json

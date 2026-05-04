@@ -1,12 +1,24 @@
-using Qams.BuildingBlocks.ServiceInfo;
+using Qams.BuildingBlocks.Common;
+using Qams.Search.Api;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddSingleton<SearchStore>();
+
 var app = builder.Build();
 
-app.MapQamsServiceInfo(new QamsServiceDescriptor(
-    "Qams.Search.Api",
-    "Intelligence",
-    "Scaffolded",
-    ["Keyword search", "Semantic search", "Security trimming", "Vector indexes"]));
+app.MapGet("/health", () => Results.Ok(new
+{
+    service = "Qams.Search.Api",
+    status = "Healthy",
+    utc = DateTimeOffset.UtcNow
+}));
+
+app.MapGet("/api/v1/search", (HttpRequest request, SearchStore store) =>
+{
+    var context = QamsRequestContextFactory.From(request);
+    var query = request.Query["query"].ToString();
+    var results = store.Search(query, context.TenantId);
+    return Results.Ok(ApiResponse.Ok(results, context.CorrelationId));
+});
 
 app.Run();

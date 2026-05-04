@@ -37,7 +37,7 @@ Idempotency-Key: demo-rule-trigger-001
 
 {
   "tenantId": "tenant-life-sciences-demo",
-  "resourceType": "CAPA Case",
+  "resourceType": "CapaCase",
   "triggerEvent": "CapaClosed",
   "payload": {
     "capaCaseId": "capa-0001"
