@@ -25,6 +25,11 @@
     <ProjectReference Include="..\..\..\src\backend\services\Qams.Forms.Api\Qams.Forms.Api.csproj" Aliases="global,FormsApi" />
     <ProjectReference Include="..\..\..\src\backend\services\Qams.Rules.Api\Qams.Rules.Api.csproj" Aliases="global,RulesApi" />
     <ProjectReference Include="..\..\..\src\backend\services\Qams.Capa.Api\Qams.Capa.Api.csproj" Aliases="global,CapaApi" />
+    <ProjectReference Include="..\..\..\src\backend\services\Qams.Search.Api\Qams.Search.Api.csproj" Aliases="global,SearchApi" />
+    <ProjectReference Include="..\..\..\src\backend\services\Qams.Policy.Api\Qams.Policy.Api.csproj" Aliases="global,PolicyApi" />
+    <ProjectReference Include="..\..\..\src\backend\services\Qams.Workflow.Api\Qams.Workflow.Api.csproj" Aliases="global,WorkflowApi" />
+    <ProjectReference Include="..\..\..\src\backend\services\Qams.QualityEvents.Api\Qams.QualityEvents.Api.csproj" Aliases="global,QualityEventsApi" />
+    <ProjectReference Include="..\..\..\src\backend\services\Qams.Reporting.Api\Qams.Reporting.Api.csproj" Aliases="global,ReportingApi" />
   </ItemGroup>
 
 </Project>

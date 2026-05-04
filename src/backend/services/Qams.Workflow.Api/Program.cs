@@ -55,6 +55,8 @@ app.MapPost("/api/v1/workflow-definitions", (CreateWorkflowDefinitionRequest com
 
 app.Run();
 
+public partial class Program { }
+
 sealed record WorkflowDefinition(
     string WorkflowDefinitionId,
     string Name,

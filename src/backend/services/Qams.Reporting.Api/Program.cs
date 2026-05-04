@@ -44,3 +44,5 @@ app.MapPost("/api/v1/reports", (GenerateReportRequest command, HttpRequest reque
 });
 
 app.Run();
+
+public partial class Program { }

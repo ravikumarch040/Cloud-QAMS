@@ -29,3 +29,5 @@ app.MapPost("/api/v1/policy/evaluate", (PolicyEvaluationRequest request, HttpReq
 });
 
 app.Run();
+
+public partial class Program { }

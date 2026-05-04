@@ -49,6 +49,8 @@ app.MapPost("/api/v1/quality-events", (CreateQualityEventRequest command, HttpRe
 
 app.Run();
 
+public partial class Program { }
+
 sealed record QualityEventSummary(
     string QualityEventId,
     string TenantId,

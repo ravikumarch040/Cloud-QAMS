@@ -22,3 +22,5 @@ app.MapGet("/api/v1/search", (HttpRequest request, SearchStore store) =>
 });
 
 app.Run();
+
+public partial class Program { }
