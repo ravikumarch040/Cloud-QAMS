@@ -45,3 +45,5 @@ app.Run();
 
 sealed record TenantSummary(string TenantId, string DisplayName, string ValidationTier, string Status);
 sealed record CreateTenantRequest(string Slug, string DisplayName, string ValidationTier);
+
+public partial class Program { }

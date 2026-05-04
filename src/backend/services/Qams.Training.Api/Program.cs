@@ -97,3 +97,5 @@ app.MapPost("/api/v1/training-courses/{courseId}/enrollments/{enrollmentId}/comp
 });
 
 app.Run();
+
+public partial class Program { }

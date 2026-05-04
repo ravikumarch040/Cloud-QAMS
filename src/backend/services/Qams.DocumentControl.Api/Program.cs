@@ -1,8 +1,13 @@
+using System.Text.Json.Serialization;
 using Qams.BuildingBlocks.Common;
 using Qams.DocumentControl.Api;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddSingleton<DocumentControlStore>();
+builder.Services.ConfigureHttpJsonOptions(options =>
+{
+    options.SerializerOptions.Converters.Add(new JsonStringEnumConverter());
+});
 
 var app = builder.Build();
 
@@ -97,3 +102,5 @@ app.MapPost("/api/v1/documents/{documentId}/approve", (string documentId, Approv
 });
 
 app.Run();
+
+public partial class Program { }

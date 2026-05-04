@@ -1,8 +1,13 @@
+using System.Text.Json.Serialization;
 using Qams.BuildingBlocks.Common;
 using Qams.AuditInspection.Api;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddSingleton<AuditInspectionStore>();
+builder.Services.ConfigureHttpJsonOptions(options =>
+{
+    options.SerializerOptions.Converters.Add(new JsonStringEnumConverter());
+});
 
 var app = builder.Build();
 
@@ -74,3 +79,5 @@ app.MapPost("/api/v1/inspections/{inspectionId}/complete", (string inspectionId,
 });
 
 app.Run();
+
+public partial class Program { }

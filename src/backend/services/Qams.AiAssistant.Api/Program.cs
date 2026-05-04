@@ -39,3 +39,5 @@ app.MapPost("/api/v1/assistant/requests", (AssistantRequest command, HttpRequest
 });
 
 app.Run();
+
+public partial class Program { }

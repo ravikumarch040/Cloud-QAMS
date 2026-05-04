@@ -56,3 +56,5 @@ app.MapGet("/api/v1/audit-ledger/verify", (HttpRequest request, AuditLedgerStore
 });
 
 app.Run();
+
+public partial class Program { }

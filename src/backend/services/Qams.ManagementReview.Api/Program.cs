@@ -51,3 +51,5 @@ app.MapPost("/api/v1/review-packs", (CreateReviewPackRequest command, HttpReques
 });
 
 app.Run();
+
+public partial class Program { }

@@ -46,3 +46,5 @@ app.MapPost("/api/v1/esignatures", (CreateESignatureRequest command, HttpRequest
 });
 
 app.Run();
+
+public partial class Program { }

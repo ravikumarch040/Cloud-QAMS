@@ -1,8 +1,13 @@
+using System.Text.Json.Serialization;
 using Qams.BuildingBlocks.Common;
 using Qams.Complaints.Api;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddSingleton<ComplaintsStore>();
+builder.Services.ConfigureHttpJsonOptions(options =>
+{
+    options.SerializerOptions.Converters.Add(new JsonStringEnumConverter());
+});
 
 var app = builder.Build();
 
@@ -74,3 +79,5 @@ app.MapPost("/api/v1/complaints/{complaintId}/resolve", (string complaintId, Res
 });
 
 app.Run();
+
+public partial class Program { }

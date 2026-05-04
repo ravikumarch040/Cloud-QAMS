@@ -30,6 +30,22 @@
     <ProjectReference Include="..\..\..\src\backend\services\Qams.Workflow.Api\Qams.Workflow.Api.csproj" Aliases="global,WorkflowApi" />
     <ProjectReference Include="..\..\..\src\backend\services\Qams.QualityEvents.Api\Qams.QualityEvents.Api.csproj" Aliases="global,QualityEventsApi" />
     <ProjectReference Include="..\..\..\src\backend\services\Qams.Reporting.Api\Qams.Reporting.Api.csproj" Aliases="global,ReportingApi" />
+    <ProjectReference Include="..\..\..\src\backend\services\Qams.Training.Api\Qams.Training.Api.csproj" Aliases="global,TrainingApi" />
+    <ProjectReference Include="..\..\..\src\backend\services\Qams.DocumentControl.Api\Qams.DocumentControl.Api.csproj" Aliases="global,DocumentControlApi" />
+    <ProjectReference Include="..\..\..\src\backend\services\Qams.AuditInspection.Api\Qams.AuditInspection.Api.csproj" Aliases="global,AuditInspectionApi" />
+    <ProjectReference Include="..\..\..\src\backend\services\Qams.Complaints.Api\Qams.Complaints.Api.csproj" Aliases="global,ComplaintsApi" />
+    <ProjectReference Include="..\..\..\src\backend\services\Qams.AiAssistant.Api\Qams.AiAssistant.Api.csproj" Aliases="global,AiAssistantApi" />
+    <ProjectReference Include="..\..\..\src\backend\services\Qams.AuditLedger.Api\Qams.AuditLedger.Api.csproj" Aliases="global,AuditLedgerApi" />
+    <ProjectReference Include="..\..\..\src\backend\services\Qams.ChangeControl.Api\Qams.ChangeControl.Api.csproj" Aliases="global,ChangeControlApi" />
+    <ProjectReference Include="..\..\..\src\backend\services\Qams.EquipmentCalibration.Api\Qams.EquipmentCalibration.Api.csproj" Aliases="global,EquipmentCalibrationApi" />
+    <ProjectReference Include="..\..\..\src\backend\services\Qams.ESignature.Api\Qams.ESignature.Api.csproj" Aliases="global,ESignatureApi" />
+    <ProjectReference Include="..\..\..\src\backend\services\Qams.Identity.Api\Qams.Identity.Api.csproj" Aliases="global,IdentityApi" />
+    <ProjectReference Include="..\..\..\src\backend\services\Qams.Integration.Api\Qams.Integration.Api.csproj" Aliases="global,IntegrationApi" />
+    <ProjectReference Include="..\..\..\src\backend\services\Qams.ManagementReview.Api\Qams.ManagementReview.Api.csproj" Aliases="global,ManagementReviewApi" />
+    <ProjectReference Include="..\..\..\src\backend\services\Qams.Notification.Api\Qams.Notification.Api.csproj" Aliases="global,NotificationApi" />
+    <ProjectReference Include="..\..\..\src\backend\services\Qams.ProductMaster.Api\Qams.ProductMaster.Api.csproj" Aliases="global,ProductMasterApi" />
+    <ProjectReference Include="..\..\..\src\backend\services\Qams.RiskDesignControls.Api\Qams.RiskDesignControls.Api.csproj" Aliases="global,RiskDesignControlsApi" />
+    <ProjectReference Include="..\..\..\src\backend\services\Qams.SupplierQuality.Api\Qams.SupplierQuality.Api.csproj" Aliases="global,SupplierQualityApi" />
   </ItemGroup>
 
 </Project>

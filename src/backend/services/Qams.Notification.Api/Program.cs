@@ -79,3 +79,5 @@ app.MapPost("/api/v1/notifications/{notificationId}/acknowledge", (string notifi
 });
 
 app.Run();
+
+public partial class Program { }

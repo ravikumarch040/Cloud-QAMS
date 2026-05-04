@@ -3,6 +3,10 @@ using Qams.EquipmentCalibration.Api;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddSingleton<EquipmentCalibrationStore>();
+builder.Services.ConfigureHttpJsonOptions(options =>
+{
+    options.SerializerOptions.Converters.Add(new System.Text.Json.Serialization.JsonStringEnumConverter());
+});
 
 var app = builder.Build();
 
@@ -74,3 +78,5 @@ app.MapPost("/api/v1/equipment-calibrations/{equipmentId}/calibrate", (string eq
 });
 
 app.Run();
+
+public partial class Program { }

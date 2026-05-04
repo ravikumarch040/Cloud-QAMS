@@ -51,3 +51,5 @@ app.MapPost("/api/v1/products", (CreateProductRequest command, HttpRequest reque
 });
 
 app.Run();
+
+public partial class Program { }

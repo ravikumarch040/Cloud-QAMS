@@ -39,3 +39,5 @@ app.MapPost("/api/v1/risk-assessments", (CreateRiskAssessmentRequest command, Ht
 });
 
 app.Run();
+
+public partial class Program { }

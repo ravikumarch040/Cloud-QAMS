@@ -74,3 +74,5 @@ app.MapPost("/api/v1/suppliers/{supplierId}/score", (string supplierId, UpdateSu
 });
 
 app.Run();
+
+public partial class Program { }

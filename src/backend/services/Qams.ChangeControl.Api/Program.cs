@@ -3,6 +3,10 @@ using Qams.ChangeControl.Api;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddSingleton<ChangeControlStore>();
+builder.Services.ConfigureHttpJsonOptions(options =>
+{
+    options.SerializerOptions.Converters.Add(new System.Text.Json.Serialization.JsonStringEnumConverter());
+});
 
 var app = builder.Build();
 
@@ -74,3 +78,5 @@ app.MapPost("/api/v1/change-requests/{changeRequestId}/approve", (string changeR
 });
 
 app.Run();
+
+public partial class Program { }

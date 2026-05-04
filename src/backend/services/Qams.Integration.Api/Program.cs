@@ -57,3 +57,5 @@ app.MapPost("/api/v1/connectors/{connectorId}/test", (string connectorId, TestCo
 });
 
 app.Run();
+
+public partial class Program { }
