@@ -1,7 +1,10 @@
 using Qams.BuildingBlocks.Common;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddHttpClient();
+builder.Services.AddHttpClient("EsignatureClient", client =>
+{
+    client.BaseAddress = new Uri(builder.Configuration["EsignatureApiBaseUrl"] ?? "http://localhost:5203");
+});
 
 var app = builder.Build();
 
@@ -90,13 +93,13 @@ app.MapPost("/api/v1/capa-cases/{capaCaseId}/close", async (string capaCaseId, C
         previousAuditHash = (string?)null
     };
 
-    var httpClient = httpClientFactory.CreateClient();
+    var httpClient = httpClientFactory.CreateClient("EsignatureClient");
     httpClient.DefaultRequestHeaders.Add("X-Tenant-Id", context.TenantId);
     httpClient.DefaultRequestHeaders.Add("X-Correlation-Id", context.CorrelationId);
     httpClient.DefaultRequestHeaders.Add("Idempotency-Key", request.Headers["Idempotency-Key"].ToString());
     httpClient.DefaultRequestHeaders.Add("X-Actor-Context", request.Headers["X-Actor-Context"].ToString());
 
-    var esignatureResponse = await httpClient.PostAsJsonAsync("http://localhost:5203/api/v1/esignatures", esignatureRequest);
+    var esignatureResponse = await httpClient.PostAsJsonAsync("/api/v1/esignatures", esignatureRequest);
     if (!esignatureResponse.IsSuccessStatusCode)
     {
         return Results.BadRequest(ApiResponse.Fail<CapaCaseSummary>(
@@ -111,6 +114,8 @@ app.MapPost("/api/v1/capa-cases/{capaCaseId}/close", async (string capaCaseId, C
 });
 
 app.Run();
+
+public partial class Program { }
 
 sealed record CapaCaseSummary(
     string CapaCaseId,

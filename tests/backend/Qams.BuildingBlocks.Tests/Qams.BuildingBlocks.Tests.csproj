@@ -10,6 +10,8 @@
   <ItemGroup>
     <PackageReference Include="coverlet.collector" Version="6.0.2" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.12.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="9.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.TestHost" Version="9.0.0" />
     <PackageReference Include="xunit" Version="2.9.2" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2" />
   </ItemGroup>
@@ -20,8 +22,9 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\src\backend\shared\Qams.BuildingBlocks\Qams.BuildingBlocks.csproj" />
-    <ProjectReference Include="..\..\..\src\backend\services\Qams.Forms.Api\Qams.Forms.Api.csproj" />
-    <ProjectReference Include="..\..\..\src\backend\services\Qams.Rules.Api\Qams.Rules.Api.csproj" />
+    <ProjectReference Include="..\..\..\src\backend\services\Qams.Forms.Api\Qams.Forms.Api.csproj" Aliases="global,FormsApi" />
+    <ProjectReference Include="..\..\..\src\backend\services\Qams.Rules.Api\Qams.Rules.Api.csproj" Aliases="global,RulesApi" />
+    <ProjectReference Include="..\..\..\src\backend\services\Qams.Capa.Api\Qams.Capa.Api.csproj" Aliases="global,CapaApi" />
   </ItemGroup>
 
 </Project>

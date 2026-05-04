@@ -54,9 +54,10 @@ public class FormStoreTests
 
         var result = store.Validate("form-req", submission, "tenant-demo");
 
-        Assert.False(result?.IsValid);
-        Assert.Single(result?.Errors);
-        Assert.Equal("field_required", result?.Errors.First().Code);
+        Assert.NotNull(result);
+        Assert.False(result.IsValid);
+        Assert.Single(result.Errors);
+        Assert.Equal("field_required", result.Errors.First().Code);
     }
 
     [Fact]
@@ -87,7 +88,8 @@ public class FormStoreTests
 
         var result = store.Validate("form-good", submission, "tenant-demo");
 
-        Assert.True(result?.IsValid);
-        Assert.Empty(result?.Errors);
+        Assert.NotNull(result);
+        Assert.True(result.IsValid);
+        Assert.Empty(result.Errors);
     }
 }

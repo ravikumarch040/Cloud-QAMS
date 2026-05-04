@@ -74,3 +74,5 @@ app.MapPost("/api/v1/form-definitions/{formDefinitionId}/validate", (string form
 });
 
 app.Run();
+
+public partial class Program { }

@@ -75,3 +75,5 @@ app.MapPost("/api/v1/rules/trigger", (RuleTriggerRequest requestBody, HttpReques
 });
 
 app.Run();
+
+public partial class Program { }
