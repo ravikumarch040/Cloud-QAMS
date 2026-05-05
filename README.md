@@ -15,7 +15,8 @@ This repository now contains the first implementation scaffold:
 - Helm deployment skeleton.
 - Production design and implementation roadmap documents.
 
-The production target in the design documents is .NET 10 LTS. This workstation currently has .NET 9 installed, so the starter projects target `net9.0` to keep the scaffold buildable locally. Upgrade the target framework and SDK pin once .NET 10 is installed in the development environment.
+## Architecture Diagram
+![alt text](diagram-export-5-5-2026-1_43_30-AM.png)
 
 ## Repository Layout
 
