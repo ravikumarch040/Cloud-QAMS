@@ -18,7 +18,7 @@ This repository now contains the first implementation scaffold:
 - Production design and implementation roadmap documents.
 
 ## Architecture Diagram
-![alt text](diagram-export-5-5-2026-1_43_30-AM.png)
+![alt text](docs/diagram-export-5-5-2026-1_43_30-AM.png)
 
 ## Marketing site (GitHub Pages)
 
