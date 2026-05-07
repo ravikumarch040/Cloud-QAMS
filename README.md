@@ -1,5 +1,7 @@
 # QAMS
 
+**Repository scope:** This public repo is **foundation and demonstration material only** — early scaffolding, architecture and design references, wiki-style docs, and the GitHub Pages marketing site — shared so others can review direction and structure without implying a drop-in product. **It does not contain the full production codebase.** The complete implementation, proprietary extensions, and customer-ready artifacts live in a **private repository** and are not published here. Please do not assume feature completeness from what you see in this tree.
+
 QAMS is a life sciences and medtech-first Quality Assurance Management System designed as an Azure-native SaaS platform.
 
 ## Current Implementation Baseline
