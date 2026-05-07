@@ -18,6 +18,10 @@ This repository now contains the first implementation scaffold:
 ## Architecture Diagram
 ![alt text](diagram-export-5-5-2026-1_43_30-AM.png)
 
+## Marketing site (GitHub Pages)
+
+The interactive product landing page lives in [`marketing-site/`](marketing-site/). It is built with Vite and React and deploys to GitHub Pages via [`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml). After enabling Pages with the GitHub Actions source, pushes to `main` that touch `marketing-site/` publish the site. See [`marketing-site/README.md`](marketing-site/README.md) for local development and for aligning the Vite `base` path with your repository name.
+
 ## Repository Layout
 
 ```text

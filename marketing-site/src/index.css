@@ -1,0 +1,70 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-display: 'Instrument Sans', system-ui, sans-serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+  --color-surface-950: #050b14;
+  --color-surface-900: #0a1628;
+  --color-surface-800: #0f2238;
+  --color-accent-cyan: #22d3ee;
+  --color-accent-teal: #14b8a6;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: var(--font-body);
+    background-color: var(--color-surface-950);
+    color: rgb(226 232 240 / 0.92);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background: rgb(34 211 238 / 0.35);
+    color: #f8fafc;
+  }
+}
+
+/* Mesh gradient background helper */
+.mesh-bg {
+  background:
+    radial-gradient(ellipse 120% 80% at 10% -10%, rgb(20 184 166 / 0.22), transparent 50%),
+    radial-gradient(ellipse 90% 70% at 90% 10%, rgb(34 211 238 / 0.18), transparent 45%),
+    radial-gradient(ellipse 70% 50% at 50% 100%, rgb(15 34 56 / 0.9), transparent 55%),
+    linear-gradient(180deg, var(--color-surface-950) 0%, var(--color-surface-900) 45%, #050b14 100%);
+}
+
+.glass-panel {
+  background: rgb(15 34 56 / 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgb(148 163 184 / 0.12);
+}
+
+.flow-dash {
+  stroke-dasharray: 8 12;
+  animation: flow-dash 2.2s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flow-dash {
+    animation: none;
+  }
+}
+
+@keyframes flow-dash {
+  to {
+    stroke-dashoffset: -40;
+  }
+}
